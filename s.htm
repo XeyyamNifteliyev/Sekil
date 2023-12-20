@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: #eee;overflow: hidden;}
+        td,tr{ border: 2px solid black;padding: 20px;}
+        table{border-collapse: collapse;display: flex;align-items: center;justify-content: center;;min-height: 100vh;}
+    </style>
+</head>
+<body>
+    <table id="table"></table>
+    <script>
+        const table = document.querySelector("table")
+		let kod = ""
+		let x = 0
+		let arr = ["white", "white","white", "white", "white", "white", "black", "black", "black", "black", "black", "white", "white", "white", "white", "white",
+                    "white","white","white", "black", "black","yellow","yellow","yellow","yellow","yellow","black", "black","white","white","white",
+                    "white","white","black","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","black","white","white",
+                    "white","black","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","black","white",
+                    "white","black","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","black","white",
+                    "black", "black", "black", "black", "black", "black", "black", "black", "black", "black","black", "black", "black", "black", "black",
+                    "black","yellow","black","white","white","black", "black", "black","black","white","white","black", "black","yellow","black",
+                    "black","yellow","black","white","black", "black", "black","yellow","black","white","black", "black", "black","yellow","black",
+                    "black","yellow","yellow","black", "black", "black","yellow","yellow","yellow","black", "black","black","yellow","yellow","black",
+                    "black","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","black",
+                    "white","black","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","black","yellow","yellow","black","white",
+                    "white","black","yellow","yellow","yellow","yellow", "black", "black", "black", "black","yellow","yellow","yellow","black","white",
+                    "white","white","black","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","yellow","black","white","white",
+                    "white", "white","white","black", "black","yellow","yellow","yellow","yellow","yellow","black","black","white","white","white",
+                    "white", "white","white", "white", "white","black", "black", "black", "black", "black","white", "white", "white", "white", "white",
+
+    ]               
+
+		for (let i = 1; i <= 15; i++) {
+			kod += "<tr>"
+			for (let j = 1; j <= 15; j++) {
+				x++
+				console.log(x);
+				kod += `<td style="background-color:${arr[x]};" ></td>`
+			}
+			kod += "</tr>"
+		}
+		table.innerHTML = kod
+    </script>
+    
+</body>
+</html>
